@@ -3,6 +3,7 @@ import AboutSection from "@/components/AboutSection";
 import MapSection from "@/components/MapSection";
 import CallToAction from "@/components/CallToAction";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <AboutSection />
       <MapSection />
       <CallToAction />
-      {/* Aqui você adicionaria outras seções, como a de notícias futuras */}
+      <Footer />
     </>
   );
 }

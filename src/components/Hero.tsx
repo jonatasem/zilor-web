@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-zilor-green text-white">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#1b4332] text-white">
       
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
@@ -14,6 +14,7 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover opacity-85"
+          poster="/images/static-hero.png"
         >
           <source src="https://www.dropbox.com/scl/fi/j7khnbujhtddzbtk96s75/intro-zilor.mp4?rlkey=j268zusc6vsc8bp0puj799l7i&st=jf2ew555&raw=1" type="video/mp4" />
           Seu navegador não suporta vídeos.
@@ -50,7 +51,7 @@ export default function Hero() {
         >
           <Link 
             href="#sobre" 
-            className="inline-block bg-zilor-amber text-white text-lg font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition-colors"
+            className="inline-block bg-[#f59e0b] text-white text-lg font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition-colors"
           >
             Saiba Mais
           </Link>

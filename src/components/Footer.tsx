@@ -1,55 +1,70 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-800 text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Coluna 1: Logo e Descrição */}
-        <div>
-          <Link href="/" className="flex items-center gap-2 mb-4">
-            <Image src="/logo.svg" alt="Zilor Logo" width={32} height={32} className="filter invert" /> {/* Inverte a cor do SVG para branco */}
-            <span className="text-2xl font-bold text-white">Zilor</span>
-          </Link>
-          <p className="text-sm">
-            Líder no setor sucroenergético, impulsionando a sustentabilidade e a inovação para o futuro.
-          </p>
+    <footer className="bg-[#1b4332] text-white pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+        
+        {/* Logo e Info Legal */}
+        <div className="space-y-6">
+          <Image src="/images/logo.svg" alt="Zilor" width={120} height={45} className="brightness-0 invert" />
+          <div className="text-sm text-white/60 space-y-1">
+            <p className="font-bold text-white">Açucareira Quatá S.A</p>
+            <p>CNPJ: 60.855.574/0001-73</p>
+          </div>
+          <div className="flex gap-4">
+            <Link href="#" className="hover:text-[#f59e0b] transition-colors"><Linkedin size={20} /></Link>
+            <Link href="#" className="hover:text-[#f59e0b] transition-colors"><Instagram size={20} /></Link>
+            <Link href="#" className="hover:text-[#f59e0b] transition-colors"><Youtube size={20} /></Link>
+          </div>
         </div>
 
-        {/* Coluna 2: Links Rápidos */}
+        {/* Unidades Corporativas */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Navegação</h3>
-          <ul className="space-y-2">
-            <li><Link href="#sobre" className="hover:text-white transition-colors">Sobre Nós</Link></li>
-            <li><Link href="#unidades" className="hover:text-white transition-colors">Nossas Unidades</Link></li>
-            <li><Link href="#sustentabilidade" className="hover:text-white transition-colors">Sustentabilidade</Link></li>
-            <li><Link href="#carreiras" className="hover:text-white transition-colors">Trabalhe Conosco</Link></li>
+          <h4 className="font-bold mb-6 text-[#f59e0b] uppercase text-xs tracking-widest">Escritórios</h4>
+          <div className="space-y-4 text-sm text-white/70">
+            <div>
+              <p className="text-white font-medium">São Paulo</p>
+              <p>Av. Pres. Juscelino Kubitschek, 1400</p>
+              <p>Vila Olímpia - SP</p>
+            </div>
+            <div>
+              <p className="text-white font-medium">Lençóis Paulista</p>
+              <p>Rua 15 de Novembro, 865</p>
+              <p>Centro - SP</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Links Rápidos */}
+        <div>
+          <h4 className="font-bold mb-6 text-[#f59e0b] uppercase text-xs tracking-widest">Navegação</h4>
+          <ul className="space-y-3 text-sm">
+            <li><Link href="#sobre" className="hover:text-[#f59e0b] transition-colors">Sobre a Zilor</Link></li>
+            <li><Link href="#unidades" className="hover:text-[#f59e0b] transition-colors">Unidades</Link></li>
+            <li><Link href="#sustentabilidade" className="hover:text-[#f59e0b] transition-colors">Sustentabilidade</Link></li>
+            <li><Link href="#carreiras" className="hover:text-[#f59e0b] transition-colors">Trabalhe Conosco</Link></li>
           </ul>
         </div>
 
-        {/* Coluna 3: Contato */}
+        {/* Suporte */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Contato</h3>
-          <p className="text-sm">Av. Brasil, 1234 - Cidade - SP</p>
-          <p className="text-sm">CEP: 12345-678</p>
-          <p className="text-sm">Telefone: (11) 98765-4321</p>
-          <p className="text-sm">Email: contato@zilor.com.br</p>
-        </div>
-
-        {/* Coluna 4: Redes Sociais */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Redes Sociais</h3>
-          <div className="flex space-x-4">
-            <Link href="#" aria-label="Facebook" className="hover:text-white transition-colors"><Facebook size={24} /></Link>
-            <Link href="#" aria-label="Instagram" className="hover:text-white transition-colors"><Instagram size={24} /></Link>
-            <Link href="#" aria-label="LinkedIn" className="hover:text-white transition-colors"><Linkedin size={24} /></Link>
-            <Link href="#" aria-label="YouTube" className="hover:text-white transition-colors"><Youtube size={24} /></Link>
-          </div>
+          <h4 className="font-bold mb-6 text-[#f59e0b] uppercase text-xs tracking-widest">Privacidade</h4>
+          <ul className="space-y-3 text-sm">
+            <li><Link href="#" className="hover:text-[#f59e0b] transition-colors">Política de Privacidade</Link></li>
+            <li><Link href="#" className="hover:text-[#f59e0b] transition-colors">Termos de Uso</Link></li>
+            <li><Link href="#" className="hover:text-[#f59e0b] transition-colors">Canal de Ética</Link></li>
+          </ul>
         </div>
       </div>
-      <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Zilor. Todos os direitos reservados.
+
+      <div className="max-w-7xl mx-auto px-6 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-medium">
+        <p>© {currentYear} Zilor. Todos os direitos reservados.</p>
+        <p>Jonatas Elieser Moreira</p>
       </div>
     </footer>
   );
