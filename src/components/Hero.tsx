@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#1b4332] text-white">
+    <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-[#1b4332] text-white">
       
       {/* Background Video */}
       <div className="absolute inset-0 z-0">

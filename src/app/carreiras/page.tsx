@@ -1,5 +1,4 @@
 "use client"
-import { motion } from "framer-motion";
 import { Users, GraduationCap, Heart, ExternalLink, Search, UserPlus, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

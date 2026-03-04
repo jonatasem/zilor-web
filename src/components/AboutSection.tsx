@@ -17,12 +17,9 @@ const Card = ({ icon: Icon, title, description, delay, isOffset }: CardProps) =>
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.6, ease: "easeOut" }}
-    className={`bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 
-                hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 group
-                ${isOffset ? 'md:mt-12' : ''}`}
+    className={`bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 group ${isOffset ? 'md:mt-12' : ''}`}
   >
-    <div className="w-14 h-14 rounded-2xl bg-[#f8f9fa] flex items-center justify-center mb-6 
-                    group-hover:bg-[#f59e0b] group-hover:rotate-6 transition-all duration-500">
+    <div className="w-14 h-14 rounded-2xl bg-[#f8f9fa] flex items-center justify-center mb-6 group-hover:bg-[#f59e0b] group-hover:rotate-6 transition-all duration-500">
       <Icon className="w-7 h-7 text-[#1b4332] group-hover:text-white transition-colors" />
     </div>
     <h3 className="text-xl font-black text-[#1b4332] mb-3 tracking-tight uppercase">{title}</h3>

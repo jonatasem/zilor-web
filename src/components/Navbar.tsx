@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
-import { Menu, X, Info, MapPin, Leaf, Briefcase } from "lucide-react";
+import { House,  Menu, X, Info, MapPin, Leaf, Briefcase } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,9 +18,10 @@ export default function Navbar() {
 
   // Links da Navbar para evitar repetição de código
   const navLinks = [
+    { name: "Início", href: "#inicio", icon: House },
     { name: "Sobre", href: "#sobre", icon: Info },
     { name: "Unidades", href: "#unidades", icon: MapPin },
-    { name: "Sustentabilidade", href: "#sustentabilidade", icon: Leaf },
+    { name: "Sustentabilidade", href: "/sustentabilidade", icon: Leaf },
   ];
 
   return (
